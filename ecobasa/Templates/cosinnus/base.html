@@ -1,0 +1,9 @@
+{% overextends "cosinnus/base.html" %}
+{% load static %}
+{% block csshead %}
+    {{ block.super }}
+    {% if SETTINGS.DEBUG %}
+        <link rel="stylesheet/less" href="{% static "sass/main.scss" %}">
+
+    {% endif %}
+{% endblock %}
